@@ -37,6 +37,11 @@ async function execution() {
 
   console.log(data);
 
+  chrome.runtime.sendMessage({
+    action: "statusUpdate",
+    data: { status: "testing status" },
+  });
+
   async function sleep(time) {
     return new Promise((resolve) => setTimeout(resolve, time));
   }
