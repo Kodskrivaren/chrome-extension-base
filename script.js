@@ -16,6 +16,6 @@ function onMessage(message, sender, sendResponse) {
 function onClick(e) {
   chrome.runtime.sendMessage({
     action: "executeBackgroundCode",
-    data: [{ name: inputField.value }],
+    data: inputField.value,
   });
 }

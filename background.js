@@ -35,7 +35,11 @@ async function execution() {
   await sleep(500);
   console.log("data variable");
 
-  console.log(data);
+  const itemArray = data.data.split("\n");
+
+  itemArray.pop();
+
+  console.log(itemArray);
 
   chrome.runtime.sendMessage({
     action: "statusUpdate",
