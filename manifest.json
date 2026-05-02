@@ -3,10 +3,14 @@
   "description": "Base Level Extension",
   "version": "0.1",
   "manifest_version": 3,
-  "permissions": ["activeTab", "scripting", "storage"],
+  "permissions": ["activeTab", "scripting", "storage", "tabs", "background"],
   "background": {
     "service_worker": "background.js"
   },
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
   "action": {
     "default_popup": "index.html"
   }
